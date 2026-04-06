@@ -14,27 +14,26 @@ typedef struct AddressBook_Data
     int contact_count;
 } AddressBook;
 
-/* GLOBAL — required for duplicate checks while editing */
-extern int editing_index;
-
-/* VALIDATION */
-int name_validation(char *name);
-int mobile_validation(char *mob);
-int email_validation(char *email);
-
-/* DUPLICATES */
-int duplicate_mobile(AddressBook *, char *);
-int duplicate_email(AddressBook *, char *);
-
-/* CRUD OPERATIONS */
+/* Function declarations */
+// void init_intitalization(AddressBook *);
 int create_contact(AddressBook *);
 void list_contacts(AddressBook *);
 int search_contacts(AddressBook *);
 int edit_contact(AddressBook *);
 int delete_contact(AddressBook *);
+void save_contacts(AddressBook *);
 
-/* FILE OPERATIONS */
-int save_contacts(AddressBook *);
-int load_contacts(AddressBook *);
+// validation//
+
+int name_validation(char* name);
+int number_validation(char* number);
+int email_validation(char* mail);
+
+// duplicates
+int is_duplicate_mobile(AddressBook *addressbook, char *mobile);
+int is_duplicate_email(AddressBook *addressbook, char *email);
+
+//load contact
+void loadContactsFromFile(AddressBook *addressBook);
 
 #endif
