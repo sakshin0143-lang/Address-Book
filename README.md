@@ -1,17 +1,25 @@
 Address Book in C
 
-A console-based Address Book application developed in C that allows users to efficiently manage contacts with features like adding, searching, editing, deleting, and persistent storage using CSV files.
+A console-based Address Book application written in C for managing contacts efficiently. The program supports creating, searching, editing, deleting, and storing contacts with proper validation and CSV-based persistence.
 
-Features:
-1.Add new contacts
-2.View all contacts (sorted alphabetically)
-3.Search contacts by name, mobile number, or email
-4.Edit existing contact details
-5.Delete contacts
-6.Input validation for name, mobile number, and email
-7.Duplicate check for mobile numbers and emails
-8.Data persistence using CSV file handling
-Technologies Used:
+Features
+Add new contacts
+Display all contacts sorted alphabetically
+Search contacts by name, mobile number, or email
+Edit existing contact details
+Delete contacts
+Validate inputs (name, mobile number, email)
+Prevent duplicate mobile numbers and email IDs
+Store and retrieve data using CSV file
+Technologies Used
 C Programming
 File Handling (CSV)
-Structures and Functions
+Structures and Modular Programming
+Project Structure
+Address-Book/
+├── main.c
+├── contact.c
+├── contact.h
+├── contacts.csv
+├── README.md
+
